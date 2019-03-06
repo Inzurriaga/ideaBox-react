@@ -1,5 +1,13 @@
 import React, { Component } from "react"
 
+class Card{
+    constructor(title, body, id){
+        this.title = title;
+        this.body = body;
+        this.id = id
+    }
+}
+
 export default class CreateCard extends Component {
     constructor(){
         super();
@@ -9,18 +17,37 @@ export default class CreateCard extends Component {
         }
     }
 
+    userTitleInput = e => {
+        this.setState({
+            cardTitle: e.target.value
+        })
+    }
+
+    userBodyInput = e => {
+        this.setState({
+            cardBody: e.target.value
+        })
+    }
+
+    submitNewCard = e => {
+        e.preventDefault()
+        let id = new Date()
+        let newCard = new Card(this.state.cardTitle, this.state.cardBody, id)
+        console.log(newCard)
+    }
+
     render(){
         return(
             <form>
                 <label>
                     title
-                    <input type="text"></input>
+                    <input onChange={this.userTitleInput} type="text"></input>
                 </label>
                 <label>
                     body
-                    <textarea></textarea>
+                    <textarea onChange={this.userBodyInput}></textarea>
                 </label>
-                <input type="submit"></input>
+                <input onClick={this.submitNewCard}type="submit"></input>
             </form>
         )
     }
