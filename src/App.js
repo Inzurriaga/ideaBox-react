@@ -8,13 +8,20 @@ export default class App extends Component {
   constructor(){
     super();
     this.state = {
-      true: true
+      searchInput: ""
     }
-  }
+  };
+
+  updateUserSearch = (userInputSearch) => {
+    this.setState({
+      searchInput: userInputSearch
+    })
+  };
+
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header updateUserSearch={this.updateUserSearch}/>
         <CardCreateForm />
         <CardContainer />
       </div>
