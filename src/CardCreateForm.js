@@ -4,15 +4,24 @@ export default class CreateCard extends Component {
     constructor(){
         super();
         this.state = {
-            cardTitle: ""
+            cardTitle: "",
+            cardBody: ""
         }
     }
 
     render(){
         return(
-            <div>
-                
-            </div>
+            <form>
+                <label>
+                    title
+                    <input type="text"></input>
+                </label>
+                <label>
+                    body
+                    <textarea></textarea>
+                </label>
+                <input type="submit"></input>
+            </form>
         )
     }
 }

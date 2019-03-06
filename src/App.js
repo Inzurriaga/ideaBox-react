@@ -8,7 +8,20 @@ export default class App extends Component {
   constructor(){
     super();
     this.state = {
-      searchInput: ""
+      searchInput: "",
+      cards: [],
+      filterCard: []
+    }
+  };
+
+  componentDidMount(){
+    let cards = JSON.parse(localStorage.getItem("ideaCard"))
+    if(cards){
+      this.setState({
+        cards: cards
+      })
+    }else{
+      console.log("no cards in localStorage")
     }
   };
 
