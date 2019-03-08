@@ -41,7 +41,8 @@ export default class App extends Component {
         <Header updateUserSearch={this.updateUserSearch}/>
         <CardCreateForm updateUserCards={this.updateUserCards}
                         cards={this.state.cards}/>
-        <CardContainer cards={this.state.cards}/>
+        <CardContainer cards={this.state.cards}
+                        updateUserCards={this.updateUserCards}/>
       </div>
     );
   }

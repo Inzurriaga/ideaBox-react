@@ -8,7 +8,9 @@ export default function CardContainer(props) {
                 props.cards.map((card) => {
                     return(
                         <Card key={card.id}
-                            card={card}/>
+                            card={card}
+                            cards={props.cards}
+                            updateUserCards={props.updateUserCards}/>
                     )
                 })
             }

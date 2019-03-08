@@ -4,6 +4,7 @@ class Card{
     constructor(title, body, id){
         this.title = title;
         this.body = body;
+        this.quality = "Swill";
         this.id = id
     }
 }
