@@ -3,11 +3,12 @@ import Card from "./Card"
 
 export default function CardContainer(props) {
     return(
-        <div>
+        <div className="cardContainer-section">
             {
                 props.cards.map((card) => {
                     return(
-                        <Card card={card}/>
+                        <Card key={card.id}
+                            card={card}/>
                     )
                 })
             }

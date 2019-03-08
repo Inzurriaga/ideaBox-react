@@ -20,7 +20,7 @@ export default class Header extends Component {
 
     render(){
         return(
-            <section>
+            <section className="header-section">
                 <h1>ideabox</h1>
                 <div>
                     <input onChange={this.userChangeInput} type="text"></input>

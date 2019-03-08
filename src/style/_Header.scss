@@ -1,0 +1,31 @@
+.header-section {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #524649;
+    h1 {
+        font-size: 3.5em;
+        color: #B2A1B1;
+        margin-left: 40px;
+    }
+    div {
+        position: relative;
+        margin-right: 40px; 
+        input {
+            font-size: 2em;
+            height: 40px;
+            width: 400px;
+            border-radius: 5px 0px 0px 5px;
+            outline: none;
+        }
+        button {
+            top: -1px;
+            position: absolute;
+            height: 42px;
+            border-radius: 0px 5px 5px 0px; 
+            border: 2px solid black; 
+            outline: none;
+        }
+    }
+}

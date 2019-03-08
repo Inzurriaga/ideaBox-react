@@ -10,10 +10,10 @@ export default class Card extends Component{
 
     render(){
         return(
-            <div>
-                <h1>{this.props.card.title}</h1>
+            <section className="card-section">
+                <h2>{this.props.card.title}</h2>
                 <p>{this.props.card.body}</p>
-            </div>
+            </section>
         )
     }
 }

@@ -2,15 +2,13 @@ import React, { Component } from 'react';
 import Header from "./Header"
 import CardCreateForm from "./CardCreateForm"
 import CardContainer from "./CardContainer"
-import './App.css';
 
 export default class App extends Component {
   constructor(){
     super();
     this.state = {
       searchInput: "",
-      cards: [],
-      filterCard: []
+      cards: []
     }
   };
 
@@ -31,11 +29,18 @@ export default class App extends Component {
     })
   };
 
+  updateUserCards = (cards) => {
+    this.setState({
+      cards: cards
+    })
+  };
+
   render() {
     return (
       <div className="App">
         <Header updateUserSearch={this.updateUserSearch}/>
-        <CardCreateForm cards={this.state.cards}/>
+        <CardCreateForm updateUserCards={this.updateUserCards}
+                        cards={this.state.cards}/>
         <CardContainer cards={this.state.cards}/>
       </div>
     );

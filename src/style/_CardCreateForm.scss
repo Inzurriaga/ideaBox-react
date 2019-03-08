@@ -1,0 +1,21 @@
+.cardCreateForm-section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EAEAEA;
+    label {
+        width: 800px;
+        display: flex;
+        flex-direction: column;
+        input {
+            border-radius: 5px;
+        }
+        textarea {
+            border-radius: 5px; 
+        }
+    }
+    input {
+        width: 800px;
+    }
+}
