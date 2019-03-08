@@ -6,4 +6,13 @@
     h2 {
         color: #6E646B; 
     }
+    svg {
+        width: 20px;
+        cursor: pointer;
+            &:hover {
+                circle{
+                    fill: #EAEAEA;
+                }
+            }
+    }
 }

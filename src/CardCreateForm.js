@@ -32,7 +32,7 @@ export default class CreateCard extends Component {
 
     submitNewCard = e => {
         e.preventDefault()
-        let id = new Date()
+        let id = Date.now()
         let newCard = new Card(this.state.cardTitle, this.state.cardBody, id)
         this.props.cards.push(newCard)
         localStorage.setItem("ideaCard", JSON.stringify(this.props.cards))
